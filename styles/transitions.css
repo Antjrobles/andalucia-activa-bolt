@@ -1,0 +1,33 @@
+/* Transitions for page changes */
+
+/* Page entrance animation */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition-enter {
+  animation: fadeInPage 800ms ease-out forwards;
+}
+
+/* Ensure fade animations work correctly in all browsers */
+.page-transition {
+  transition: opacity 800ms, transform 800ms;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
